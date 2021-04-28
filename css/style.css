@@ -1,0 +1,87 @@
+@import url('./font-family-muli.css');
+
+:root {
+  --background-color: #222629;
+
+  --text-color: #ffffff;
+
+  --primary-color: #61892f;
+  --primary-active-color: #86c232;
+
+  --secondary-color: #474b4f;
+  --secondary-active-color: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--background-color);
+}
+
+.project-list-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-container {
+  min-width: 375px;
+  margin: 1%;
+  width: 40%;
+  min-height: 200px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--secondary-color);
+}
+.project-container:active {
+  transform: scale(0.98);
+}
+.project-container:hover {
+  cursor: pointer;
+}
+
+.project-image {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color);
+}
+
+.project-details {
+  width: 67%;
+  height: 100%;
+}
+
+.project-details > h3 {
+  padding: 2%;
+  margin: 0;
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-details > p {
+  padding: 2%;
+  margin: 0;
+  width: 100%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}

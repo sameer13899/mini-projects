@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+  --body-color: #e7e7e8;
+  --disabled-color: #6a6c73;
+  --green-color: #58f4d2;
+  --red-color: #e76464;
+
+  --dark-display-color: #22252d;
+  --dark-keypad-background-color: #292d36;
+  --dark-text-color: #ffffff;
+  --dark-keycell-bg-color: #272b33;
+  --dark-keycell-bg-color-hover: #000000;
+
+  --light-display-color: #ffffff;
+  --light-keypad-background-color: #f9f9f9;
+  --light-text-color: #292d36;
+  --light-keycell-bg-color: #f9f9f9;
+  --light-keycell-bg-color-hover: #c9c9c9;
+}
+
+body {
+  background: var(--body-color);
+  color: var(--dark-text-color);
+  font-family: 'Open Sans', sans-serif;
+  user-select: none;
+  transition: color 1s ease;
+}
+
+body.light {
+  color: var(--light-text-color);
+}
+
+.calculator-container {
+  height: 97.8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator-body {
+  min-height: 612px;
+  min-width: 300px;
+  height: 60%;
+  width: 15%;
+  background: var(--dark-display-color);
+  border-radius: 24px;
+  overflow: hidden;
+}
+.calculator-body.light {
+  background: var(--light-display-color);
+}
+
+.calculator-display {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.theme-container {
+  background: var(--dark-keypad-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6%;
+  border-radius: 12px;
+}
+.theme-container.light {
+  background: var(--light-keypad-background-color);
+}
+
+.day-mode {
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: var(--dark-text-color);
+}
+.day-mode.light {
+  color: var(--light-text-color);
+}
+
+.night-mode {
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: var(--dark-text-color);
+}
+
+.input-output-container {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin: 8%;
+}
+
+.input-container {
+  font-size: 20px;
+  padding: 2px;
+  display: flex;
+}
+.operand {
+  padding: 2px;
+}
+.operator {
+  padding: 1px 2px;
+}
+
+.output-container {
+  padding: 2px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.calculator-keypad-container {
+  background: var(--dark-keypad-background-color);
+  border-top-right-radius: 24px;
+  border-top-left-radius: 24px;
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.calculator-keypad-container.light {
+  background: var(--light-keypad-background-color);
+}
+
+.calculator-keypad-body {
+  position: relative;
+  bottom: 10px;
+}
+
+.key-row {
+  display: flex;
+  justify-content: center;
+}
+
+.key-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  background: var(--dark-keycell-bg-color);
+  padding: 4%;
+  margin: 2%;
+  border-radius: 12px;
+  width: 24px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.key-cell.light {
+  background: var(--light-keycell-bg-color);
+}
+
+.key-cell:hover {
+  background: var(--dark-keycell-bg-color-hover);
+}
+.key-cell.light:hover {
+  background: var(--light-keycell-bg-color-hover);
+}
+
+.key-cell:active {
+  transform: scale(1.1);
+}
+
+.action-key-row {
+  color: var(--green-color);
+}
+
+.action-key-col {
+  color: var(--red-color);
+}
+
+.operator {
+  color: var(--red-color);
+}
+
+.active {
+  cursor: pointer;
+  color: var(--disabled-color);
+  transition: background 0.3s ease;
+}
+
+.active:hover {
+  background: var(--dark-keycell-bg-color-hover);
+}
+.active.light:hover {
+  background: var(--light-keycell-bg-color-hover);
+}
+
+.active:active {
+  transform: scale(1.1);
+}
+
+.flip-180 {
+  transform: rotateY(180deg);
+}

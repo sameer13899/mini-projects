@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link
+      rel="stylesheet"
+      href="./css/font-awesome-4.7.0 2/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="calculator-container">
+      <div class="calculator-body">
+        <div class="calculator-display">
+          <div class="theme-container">
+            <div class="day-mode active" id="day" onclick="toggleTheme(1)">
+              <i class="fa fa-sun-o fa-lg icon-size" aria-hidden="true"></i>
+            </div>
+            <div class="night-mode" id="night" onclick="toggleTheme(0)">
+              <i class="fa fa-moon-o fa-lg icon-size" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="input-output-container">
+            <label class="input-container">
+              <!-- <div class="operand">308</div>
+              <div class="operator">x</div>
+              <div class="operand">42</div> -->
+            </label>
+            <label class="output-container"></label>
+          </div>
+        </div>
+        <div class="calculator-keypad-container">
+          <div class="calculator-keypad-body">
+            <div class="key-row">
+              <div
+                class="key-cell action-key-row"
+                onclick="allClearClickHandler()"
+              >
+                AC
+              </div>
+              <div
+                class="key-cell action-key-row"
+                onclick="toggleSignHandler()"
+              >
+                +/-
+              </div>
+              <div
+                class="key-cell action-key-row"
+                onclick="operationClickHandler('REMAINDER')"
+              >
+                %
+              </div>
+              <div
+                class="key-cell action-key-col"
+                onclick="operationClickHandler('DIVIDE')"
+              >
+                /
+              </div>
+            </div>
+            <div class="key-row">
+              <div class="key-cell" onclick="numClickHandler(7)">7</div>
+              <div class="key-cell" onclick="numClickHandler(8)">8</div>
+              <div class="key-cell" onclick="numClickHandler(9)">9</div>
+              <div
+                class="key-cell action-key-col"
+                onclick="operationClickHandler('MULTIPLY')"
+              >
+                x
+              </div>
+            </div>
+            <div class="key-row">
+              <div class="key-cell" onclick="numClickHandler(4)">4</div>
+              <div class="key-cell" onclick="numClickHandler(5)">5</div>
+              <div class="key-cell" onclick="numClickHandler(6)">6</div>
+              <div
+                class="key-cell action-key-col"
+                onclick="operationClickHandler('SUBTRACT')"
+              >
+                -
+              </div>
+            </div>
+            <div class="key-row">
+              <div class="key-cell" onclick="numClickHandler(1)">1</div>
+              <div class="key-cell" onclick="numClickHandler(2)">2</div>
+              <div class="key-cell" onclick="numClickHandler(3)">3</div>
+              <div
+                class="key-cell action-key-col"
+                onclick="operationClickHandler('ADD')"
+              >
+                +
+              </div>
+            </div>
+            <div class="key-row">
+              <div class="key-cell">
+                <i class="fa fa-repeat flip-180" aria-hidden="true"></i>
+              </div>
+              <div class="key-cell" onclick="numClickHandler(0)">0</div>
+              <div class="key-cell" onclick="decimalClickHandler()">.</div>
+              <div
+                class="key-cell action-key-col"
+                onclick="resultClickHandler()"
+              >
+                =
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
