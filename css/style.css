@@ -34,7 +34,6 @@ body {
 }
 
 .project-container {
-  min-width: 95vw;
   margin: 1%;
   width: 40%;
   min-height: 200px;
