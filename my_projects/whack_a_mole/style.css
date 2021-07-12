@@ -4,6 +4,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #333333;
+  color: #fbff00;
 }
 .grid-container {
   display: grid;
@@ -14,14 +16,18 @@ body {
 
 .square {
   border: 1px solid;
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   cursor: pointer;
-  border-radius: 40px;
+  border-radius: 60px;
+  background-color: #a89a9a;
 }
 
 .square.mole {
-  background-color: red;
+  background: url(./img.png);
+  background-repeat: no-repeat;
+  background-size: 45px 45px;
+  background-position: center;
 }
 
 .score-container {
@@ -30,4 +36,17 @@ body {
 
 .time-container {
   display: flex;
+}
+
+.btn {
+  color: inherit;
+  height: 50px;
+  width: 90px;
+  margin: 0 30px;
+  font-size: 1.2rem;
+  background: #003355;
+}
+
+.btn:disabled {
+  background: #2f4858;
 }
